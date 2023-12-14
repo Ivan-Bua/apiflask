@@ -1,6 +1,5 @@
 FROM python
-ADD helloworld.py /
-RUN pip install flask
-RUN pip install flask_restful
+ADD . /
+RUN pip install -r requirements.txt
 EXPOSE 5000
-CMD [ "python", "./helloworld.py"]
+CMD [ "python", "./app.py"]
